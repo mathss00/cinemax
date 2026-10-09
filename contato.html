@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineMundo - Contato</title>
+    <title>CineMundo - Contatos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1> CineMundo</h1>
+        <h1>CineMundo</h1>
         <nav>
-            <a href="index.html">Início</a> |
-            <a href="sobre.html">Sobre</a> |
-            <a href="contato.html" class="ativo">Contato</a>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html" class="ativo">Contatos</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="info.html">Info</a>
         </nav>
     </header>
 
-
+    <main>
         <h2>Entre em Contato</h2>
-        <p>Envie uma mensagem com dúvidas ou sugestões de novos filmes!</p>
+        <p>Envia as tuas dúvidas ou sugestões de filmes.</p>
 
-        
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="button" onclick="alert('Formulário de demonstração. A mensagem não foi enviada.')">
+                Enviar
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 CineMundo</p>
+    </footer>
 
 </body>
 </html>

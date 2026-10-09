@@ -6,47 +6,46 @@
 
 body {
     background-color: #121212;
-    color: #ffffff;
+    color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-bottom: 30px;
 }
-
 
 header {
     background-color: #CD3333;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 25px;
 }
 
 header h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 nav a {
-    color: #ffffff;
+    display: inline-block;
+    color: white;
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    padding: 5px 10px;
+    margin: 5px;
+    padding: 8px 10px;
     border-radius: 4px;
+    font-weight: bold;
 }
 
-nav a:hover, nav a.ativo {
+nav a:hover,
+nav a.ativo {
     background-color: #a12323;
 }
-
 
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px 30px;
+    min-height: 400px;
 }
 
 h2 {
     color: #CD3333;
-    margin: 25px 0 15px 0;
+    margin: 25px 0 15px;
 }
 
 p {
@@ -55,8 +54,8 @@ p {
     margin-bottom: 15px;
 }
 
-
-.filmes-cartaz {
+.filmes-cartaz,
+.galeria {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -67,8 +66,15 @@ p {
 .card-filme {
     background-color: #1e1e1e;
     padding: 10px;
+    border: 1px solid #333;
     border-radius: 8px;
-    width: 160px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.card-filme:hover {
+    border-color: #CD3333;
+    transform: translateY(-3px);
 }
 
 .card-filme img {
@@ -83,27 +89,29 @@ p {
     margin-top: 8px;
 }
 
-
 table {
+    width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 500px;
     background-color: #1e1e1e;
 }
 
-th, td {
-    border: 1px solid #333;
+th,
+td {
+    border: 1px solid #444;
     padding: 10px;
 }
 
 th {
     background-color: #CD3333;
-    color: #ffffff;
 }
 
+tr:nth-child(even) {
+    background-color: #292929;
+}
 
-ul, ol {
+ul,
+ol {
     display: inline-block;
     text-align: left;
     color: #cccccc;
@@ -114,22 +122,29 @@ li {
     margin-bottom: 8px;
 }
 
-
 form {
     background-color: #1e1e1e;
     padding: 20px;
+    border: 1px solid #333;
     border-radius: 8px;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
+    text-align: left;
 }
 
-input, textarea {
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     background-color: #2b2b2b;
     border: 1px solid #444;
-    color: #ffffff;
+    color: white;
     border-radius: 4px;
 }
 
@@ -137,7 +152,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: #CD3333;
-    color: #ffffff;
+    color: white;
     border: none;
     border-radius: 4px;
     font-weight: bold;
@@ -146,4 +161,36 @@ button {
 
 button:hover {
     background-color: #a12323;
+}
+
+footer {
+    background-color: #1e1e1e;
+    border-top: 2px solid #CD3333;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        margin: 3px;
+        padding: 7px;
+    }
+
+    .card-filme {
+        width: 160px;
+    }
+
+    .card-filme img {
+        height: 190px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        font-size: 13px;
+    }
 }
